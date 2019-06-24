@@ -11,6 +11,6 @@ CREATE TABLE captures (
     capture_data JSON NOT NULL,
     capture_path TEXT NOT NULL,
     PRIMARY KEY (capture_id),
-    FOREIGN KEY session_id REFERENCES capture_sessions (session_id),
-    FOREIGN KEY user_id REFERENCES users (user_id)
+    FOREIGN KEY (session_id) REFERENCES capture_sessions (session_id),
+    FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
