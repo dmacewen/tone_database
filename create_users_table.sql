@@ -2,8 +2,10 @@
 CREATE EXTENSION citext;
 
 CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    email CITEXT SECONDARY KEY,
+    user_id SERIAL,
+    email CITEXT NOT NULL,
     pass TEXT NOT NULL
+    PRIMARY KEY (user_id)
+    SECONDARY KEY (email)
 );
 
