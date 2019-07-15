@@ -9,7 +9,6 @@ CREATE TABLE captures (
     device_id TEXT NOT NULL,
     capture_date TIMESTAMP NOT NULL DEFAULT NOW(),
     capture_metadata JSON NOT NULL,
-    capture_path TEXT NOT NULL,
     PRIMARY KEY (capture_id),
     FOREIGN KEY (session_id) REFERENCES capture_sessions (session_id),
     FOREIGN KEY (user_id) REFERENCES users (user_id)
