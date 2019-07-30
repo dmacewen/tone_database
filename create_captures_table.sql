@@ -6,7 +6,7 @@ CREATE TABLE captures (
     session_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
     app_version TEXT NOT NULL,
-    device_id TEXT NOT NULL,
+    device_info JSON NOT NULL,
     capture_date TIMESTAMP NOT NULL DEFAULT NOW()::TIMESTAMP,
     capture_metadata JSON NOT NULL,
     PRIMARY KEY (capture_id),
